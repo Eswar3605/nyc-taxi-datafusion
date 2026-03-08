@@ -54,6 +54,6 @@ Analyzes tipping patterns by payment method including:
 
 ## Output
 
-## Output
+Output is printed in the terminal.
 
-![Program Output](screenshots/output.png)
+Screenshot of output is included in the screenshot folder.
