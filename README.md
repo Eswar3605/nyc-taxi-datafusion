@@ -1,56 +1,46 @@
-<!-- updated screenshot -->
+<!-- force Git to detect README change -->
+# NYC Yellow Taxi 2025 Data Analysis using Rust & DataFusion
 
-# NYC Taxi Data Analysis using DataFusion
+## What the project does
+- Analyzes NYC Yellow Taxi trip data for the full year 2025.
+- Computes monthly trip statistics and total revenue.
+- Examines tip behavior by payment type.
+- Demonstrates Rust data processing with the DataFusion framework.
 
-## Project Overview
+## Dataset source
+- NYC TLC Trip Record Data: [https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
-- Loads NYC Yellow Taxi 2025 Parquet datasets
-- Performs analytics using DataFusion DataFrame API
-- Executes the same aggregations using DataFusion SQL
-- Prints results directly to the terminal
+## How to download the data
+- Download the Parquet files manually from the NYC TLC page (yellow taxi trips for 2025) and place them in the `data/` folder.
+- **Do not commit the data folder to GitHub**; only keep it locally.
 
-## Dataset Source
+## How to run the project
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/Eswar3605/nyc-taxi-datafusion.git
 
-NYC TLC Trip Record Data
+Navigate into the project folder:
 
-https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+cd nyc-taxi-datafusion
 
-## Download Data
-
-Download Yellow Taxi 2025 parquet files and place them in:
-
-data/
-
-Example files:
-
-yellow_tripdata_2025-01.parquet  
-yellow_tripdata_2025-02.parquet  
-...  
-yellow_tripdata_2025-12.parquet
-
-## Run the Project
-
+Build and run the project using Cargo:
 
 cargo run
 
+The program prints the aggregation summaries in the terminal.
 
-## Aggregations
+Aggregations
+1. Trips and revenue by month
 
-### Trips and Revenue by Month
+Groups trips by pickup month.
 
-Shows monthly taxi activity including:
+Computes total trips, total revenue, and average fare per month.
 
-- Trip count
-- Total revenue
-- Average fare
+2. Tip behavior by payment type
 
-### Tip Behavior by Payment Type
+Groups trips by payment type.
 
-Analyzes tipping patterns by payment method including:
-
-- Trip count
-- Average tip amount
-- Tip rate
+Computes total trips, average tip amount, and tip rate.
 
 ## Output
 
