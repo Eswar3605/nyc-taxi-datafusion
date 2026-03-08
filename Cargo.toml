@@ -1,0 +1,11 @@
+[package]
+name = "nyc-taxi-datafusion"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+datafusion = "38"
+tokio = { version = "1", features = ["full"] }
+
+# Fix for Arrow + Chrono conflict
+chrono = "=0.4.34"
